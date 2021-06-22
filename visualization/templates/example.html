@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>motion2prog explorer</title>
+    <link rel="shortcut icon" href="/static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/app.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/default.min.css">
+    <script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#base-nav-collapse"><i class="fa fa-bars"></i></button>
+                    <a href="/" class="navbar-brand"><strong>motion2prog</strong> explorer</a>
+                </div>
+                <div class="collapse navbar-collapse" id="base-nav-collapse">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">  
+      <div class="row">
+        <div class="col-md-10">
+          <h2 class="page-header">{{ p["dataname"] }} / {{ p["folder"] }} </h2>
+        
+            <table class="table table-striped table-hover"  border="2"> 
+            <tr>
+              <td>    
+                <center>
+                  <video width="400" controls="" loop autoplay>
+                  <source src={{ p["input_vid"] }} type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                </center>
+                </td>
+              <td>   
+              <center>
+                <video width="400" controls="" loop autoplay>
+                <source src={{ p["pose_vid"] }} type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </center>
+              </td>
+                
+              <td>   
+                <center>
+                  <video width="400" controls="" loop autoplay>
+                  <source src={{ p["pred_vid"] }} type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                </center>
+                </td>
+            </tr>
+            <tr>
+              <td>    
+              <center>
+                <b> Detected pose </b>
+              </center>
+              </td>
+              
+              <td>    
+                <center>
+                  <b> Synthesized program pose </b>
+                </center>
+              </td>
+
+              <td>    
+                <center>
+                  <b> Input video </b>
+                </center>
+              </td>
+            </tr>
+
+            </table>
+            <br>
+            <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+            <h3> Keypoints & motion programs </h3>
+
+            <table class="table table-striped table-hover"  border="2">
+                <thead>
+                </thead>
+                <tbody> 
+                    {% for keypoint in p["keypoints"] %}
+                    <tr>
+                      <td>{{ keypoint[0] }}</td>
+                      <td> <img width="100%" src={{ keypoint[2] }}></td>
+                      <td width="70%">{{ keypoint[1] | safe }} </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="container small"><div class="row"><div class="col-md-12">
+      <p>Design inspired from <a href="https://github.com/sopython/sopython-site">sopython-site</a>, built on Flask.</p>
+    </div></div></footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

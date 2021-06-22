@@ -1,0 +1,32 @@
+body>footer {
+    text-align: center;
+    padding-top: 21px;
+}
+
+code {
+    color: #2d6987;
+    background-color: #f1f5f9;
+}
+
+.pagination {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+video::-webkit-media-controls-panel {
+     background-image: linear-gradient(transparent, transparent); !important;
+}

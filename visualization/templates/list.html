@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>motion2prog explorer</title>
+    <link rel="shortcut icon" href="/static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/united/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/app.css"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#base-nav-collapse"><i class="fa fa-bars"></i></button>
+                    <a href="/" class="navbar-brand"><strong>motion2prog</strong> explorer</a>
+                </div>
+                <div class="collapse navbar-collapse" id="base-nav-collapse">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main class="container">    <div class="row"><div class="col-md-12">
+        <h2 class="page-header">
+            {{ headers[0] }}
+        </h2>
+
+        <div class="clearfix">
+            <ul class="list-inline pull-left">
+            </ul>
+        </div>
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>{{ headers[1] }}</th>
+                </tr>
+            </thead>
+            <tbody> 
+                {% for line in body %}
+                <tr>
+                    <td><a href="{{ headers[2] }}/{{ line }}" class="btn-block">{{ line }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div></div>
+</main>
+
+    <footer class="container small"><div class="row"><div class="col-md-12">
+      <p>Design inspired from <a href="https://github.com/sopython/sopython-site">sopython-site</a>, built on Flask.</p>
+    </div></div></footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
