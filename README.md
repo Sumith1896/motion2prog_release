@@ -6,8 +6,9 @@ This repository contains the official implementation of:
 
 **Hierarchical Motion Understanding via Motion Programs**
 
-[Full paper](https://arxiv.org/abs/2104.11216) | [short talk](https://www.youtube.com/watch?v=EKP2BIRlaXQ) | [long talk](https://www.youtube.com/watch?v=OpyY-s0LKAs) | [Project website](https://sumith1896.github.io/motion2prog/) 
+[full paper](https://arxiv.org/abs/2104.11216) | [short talk](https://www.youtube.com/watch?v=EKP2BIRlaXQ) | [long talk](https://www.youtube.com/watch?v=OpyY-s0LKAs) | [project webpage](https://sumith1896.github.io/motion2prog/) 
 
+![Motion Programs example](https://sumith1896.github.io/motion2prog/static/primf.png)
 
 ## Running motion2prog
 
