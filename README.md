@@ -75,11 +75,11 @@ If you find our code or paper useful to your research, please consider citing:
 ## Checklist
 Please open a GitHub issue or contact [sumith@cs.stanford.edu](sumith@cs.stanford.edu) for any issues or questions!
 
-[ ] Upload pre-processed data used in paper
-[ ] Add for-loop synthesis layer
+- [ ] Upload pre-processed data used in paper.
+- [ ] Add for-loop synthesis layer.
 
 
 ## Acknowledgements
 We thank Karan Chadha, Shivam Garg and Shubham Goel for helpful discussions. This work is in part supported by Magic Grant from the Brown Institute for Media Innovation, the Samsung Global Research Outreach (GRO) Program, Autodesk, Amazon Web Services, and Stanford HAI for AWS Cloud Credits.
 
-Parts of this repo use materials from [https://github.com/shunsukesaito/SCANimate](SCANimate) and [https://github.com/trehansiddharth/fit](fit).
+Parts of this repo use materials from [SCANimate](https://github.com/shunsukesaito/SCANimate) and [fit](https://github.com/trehansiddharth/fit).
