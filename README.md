@@ -16,9 +16,9 @@ This repository contains the official implementation of:
 
 ```sh
 $ ffmpeg -i ${video_dir}/video.mp4 ${video_dir}/frames/%05d.jpg
-$ python AlphaPose/scripts/demo_inference.py \
-    --cfg AlphaPose/pretrained_models/256x192_res50_lr1e-3_1x.yaml \
-    --checkpoint AlphaPose/pretrained_models/halpe26_fast_res50_256x192.pth \
+$ python ${alphapose_dir}/scripts/demo_inference.py \
+    --cfg ${alphapose_dir}/pretrained_models/256x192_res50_lr1e-3_1x.yaml \
+    --checkpoint ${alphapose_dir}/pretrained_models/halpe26_fast_res50_256x192.pth \
     --indir ${video_dir}/frames --outdir ${video_dir}/pose_mpii_track \
     --pose_track --showbox --flip --qsize 256
 $ mv ${video_dir}/pose_mpii_track/alphapose-results.json \
@@ -76,8 +76,6 @@ If you find our code or paper useful to your research, please consider citing:
 Please open a GitHub issue or contact [sumith@cs.stanford.edu](sumith@cs.stanford.edu) for any issues or questions!
 
 - [ ] Upload pre-processed data used in paper.
-- [ ] Add for-loop synthesis layer.
-
 
 ## Acknowledgements
 We thank Karan Chadha, Shivam Garg and Shubham Goel for helpful discussions. This work is in part supported by Magic Grant from the Brown Institute for Media Innovation, the Samsung Global Research Outreach (GRO) Program, Autodesk, Amazon Web Services, and Stanford HAI for AWS Cloud Credits.
